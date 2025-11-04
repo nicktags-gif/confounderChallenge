@@ -4,7 +4,7 @@ format:
   html: default
 bibliography: references.bib
 execute:
-  echo: true
+  echo: false
   eval: true
 ---
 
@@ -15,7 +15,7 @@ execute:
 
 ```{python}
 #| label: simulate-data
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 #| include: false
@@ -58,7 +58,7 @@ patients_df.head()
 
 ```{python}
 #| label: load-data-python
-#| echo: true
+#| echo: false
 
 import pandas as pd
 
@@ -76,7 +76,7 @@ Let's use data to figure out which surgeon performs better. @fig-plot-outcomes s
 ```{python}
 #| label: fig-plot-outcomes
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) - Observed Data"
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -160,7 +160,7 @@ Since we cannot rerun history with randomization, we run an experiment to collec
 
 ```{python}
 #| label: simulate-data-randomized
-#| echo: true
+#| echo: false
 #| message: false
 #| warning: false
 #| include: false
@@ -199,7 +199,7 @@ patients_randomized_df.head()
 
 ```{python}
 #| label: load-data-randomized-python
-#| echo: true
+#| echo: false
 
 import pandas as pd
 
@@ -218,7 +218,7 @@ patients_randomized_df.head()
 ```{python}
 #| label: fig-plot-outcomes-randomized
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) for randomized patients."
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -274,7 +274,7 @@ The key to handling a common cause confounder is to stratify by the common cause
 ```{python}
 #| label: fig-plot-outcomes-severity
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) by Patient and Severity"
-#| echo: true
+#| echo: false
 
 import matplotlib.pyplot as plt
 import numpy as np
